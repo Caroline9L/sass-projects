@@ -1,0 +1,49 @@
+/* Common.sass */
+
+body
+  font-family: $monospace
+
+h1, h2, h3, h4, h5, h6
+  font-family: $sans-serif-2
+  text-transform: uppercase
+
+h2
+  font-size: 3em
+
+.wrapper
+  +grid-container
+
+header
+  +clearfix
+
+.brand
+  +hide-text
+  +retina-image("../img/brightside-studios-logo", 125px 125px)
+  background: #222 center no-repeat
+  height: 125px
+  width: 125px
+  margin: 15px
+  float: left
+
+a
+  color: $brand-dark
+  text-decoration: none
+  border-bottom: solid 1px $brand-dark
+  &:hover
+    color: $brand-primary
+
+section, aside, article
+  margin-top: 40px
+  margin-bottom: 40px
+  +clearfix
+
+img
+  width: 100%
+  margin: 10px
+
+
+#{$all-buttons}
+  font-family: $sans-serif
+  background: $brand-primary
+  &:hover
+    background: shade($brand-primary, 10%)
